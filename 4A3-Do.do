@@ -3,52 +3,57 @@
 capture log close /* in case a log file is open from previous use */
 
 cd "/Users/David/Desktop/4A03- Research
-*MADDesktop
+*MacDesktop
 *cd "/Volumes/JDR" 
-*cd "D:\" 
-
-* changes Stata's default directory. The Default Directory is displayed 
-* in the lower left of the "main" stata screen. 
+*USB MAC
+*cd "D:\"
+*USB Lab 
 
 log using Econ4A3-Research.log, replace text
 capture drop _all
 pause on
 
-*ssc install outreg2 
+*import delimited data 
+// imports CSV than you save into .dta file
 
-*LOGCONTRACT VALUE
-use "4A03-DATA"
+use "Data1"
 
-gen ContractLength = 0 
-replace ContractLength = ContractAV
+// Variable Generation // 
+// Only run this once if you save .dta file 
 
-*Regression Contract Value 
-reg ContractValue TotalWAR, 
-outreg using 4a3-1.doc, replace
-reg ContractValue TotalWAR PlyAgeContract,  
-outreg using 4a3-1.doc, merge
-reg ContractValue TotalWAR PlyAgeContract pitcher,
-outreg using 4a3-1.doc, merge
-reg ContractValue TotalWAR PlyAgeContract pitcher ContractYr,
-outreg using 4a3-1.doc, merge
-reg ContractValue TotalWAR PlyAgeContract pitcher ContractYr ContractLength,
-outreg using 4a3-1.doc, merge
+gen LnContractValue = 0 
+replace LnContractValue = ln(contractvalue)
 
+g Pitcher =0
+replace Pitcher = 1 if plyrpost == 1
 
-*regression lnContractValue 
+// Regressions 
+// Contract Value 
+// Outreg produces Research Tables 
 
-reg LnContractValue TotalWAR, 
-outreg using 4a3-2.doc, replace
-reg LnContractValue TotalWAR PlyAgeContract,  
-outreg using 4a3-2.doc, merge
-reg LnContractValue TotalWAR PlyAgeContract pitcher,
-outreg using 4a3-2.doc, merge
-reg LnContractValue TotalWAR PlyAgeContract pitcher ContractYr,
-outreg using 4a3-2.doc, merge
-reg ContractValue TotalWAR PlyAgeContract pitcher ContractYr ContractLength,
-outreg using 4a3-2.doc, merge
+reg contractvalue totalwar 
+outreg using ContractV.doc, replace 
+reg contractvalue totalwar plyagecontract
+outreg using ContractV.doc, merge
+reg contractvalue totalwar plyagecontract Pitcher
+outreg using ContractV.doc, merge
+reg contractvalue totalwar plyagecontract Pitcher contractyr
+outreg using ContractV.doc, merge
+reg contractvalue totalwar plyagecontract Pitcher contractyr contractlength 
+outreg using ContractV.doc, merge
 
 
-pause
+//LnContractValue 
+reg LnContractValue totalwar 
+outreg using LnContractV.doc, replace 
+reg LnContractValue totalwar plyagecontract
+outreg using LnContractV.doc, merge
+reg LnContractValue totalwar plyagecontract Pitcher
+outreg using LnContractV.doc, merge
+reg LnContractValue totalwar plyagecontract Pitcher contractyr
+outreg using LnContractV.doc, merge
+reg LnContractValue totalwar plyagecontract Pitcher contractyr contractlength 
+outreg using LnContractV.doc, merge
+
 
 log close
