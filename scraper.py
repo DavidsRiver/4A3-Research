@@ -6,6 +6,13 @@ import bs4
 FirstName = 'Jose"
 LastName = "Bautista"
 
+//http://www.baseball-reference.com/players/b/bautijo02.shtml
+
+w = LastName[0]
+x = LastName[0:3]
+y = FirstName[0:1]
+z = "02"
+
 
 
 
