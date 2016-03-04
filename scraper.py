@@ -3,6 +3,8 @@
 import urllib
 import bs4
 
+urls =[]
+
 def urlgenerator2(firstname,lastname):
   a = 'http://www.baseball-reference.com/players/'
   b = lastname[0]
@@ -13,7 +15,7 @@ def urlgenerator2(firstname,lastname):
   g = '.shtml'
   z = '/'
   url = a+b+z+c+d+e+g
-  print (url.lower())
+  urls.append(url.lower())  
 
 //http://www.baseball-reference.com/players/b/bautijo02.shtml
 
