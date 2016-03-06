@@ -40,5 +40,8 @@ page = urllib.request.urlopen('http://www.baseball-reference.com/players/b/bauti
 soup = BeautifulSoup(page.read())
 print (soup.prettify())
 
+name = soup.find("span", {"id": "player_name"}).contents
+print (name)
 
+// http://stackoverflow.com/questions/23377533/python-beautifulsoup-parsing-table
 
