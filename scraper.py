@@ -1,7 +1,8 @@
 #pip install beautifulsoup4
 
-import urllib
-import bs4
+from bs4 import BeautifulSoup
+import urllib.request
+#urllib2 is urllibrequest
 
 names = [['Jose','Bautista'],['Josh','Donaldson'],['David','Price']] 
 urls = []
@@ -35,15 +36,8 @@ def urlgenerator1(name):
 urlgenerator2(names)
 print (urls)
 
-
-//http://www.baseball-reference.com/players/b/bautijo02.shtml
-
-
-page = urllib.request.urlopen("http://www.baseball-reference.com/players/b/bautijo02.shtml")
-#http://www.baseball-reference.com/players/b/bautijo02.shtml
-url = page.read()
-soup = BeautifulSoup(url)
-
+page = urllib.request.urlopen('http://www.baseball-reference.com/players/b/bautijo02.shtml')
+soup = BeautifulSoup(page.read())
 print (soup.prettify())
 
 
