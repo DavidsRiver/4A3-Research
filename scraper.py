@@ -46,13 +46,5 @@ soup = BeautifulSoup(url)
 
 print (soup.prettify())
 
-// Trying to Create function to iterate through sets 
-cat = [1,2,3]
-cat2 = []
-
-def add1(y):
-    for x in y:
-        x += 1
-    cat2.append(y)  
 
 
