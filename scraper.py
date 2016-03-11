@@ -43,5 +43,8 @@ print (soup.prettify())
 name = soup.find("span", {"id": "player_name"}).contents
 print (name)
 
+war= soup.find("tr", {'class': "stata_total}).contents 
+print (war)
+
 // http://stackoverflow.com/questions/23377533/python-beautifulsoup-parsing-table
 
