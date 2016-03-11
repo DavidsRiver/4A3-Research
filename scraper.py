@@ -40,9 +40,11 @@ page = urllib.request.urlopen('http://www.baseball-reference.com/players/b/bauti
 soup = BeautifulSoup(page.read())
 print (soup.prettify())
 
+#Provides Player Name Already Have that variable 
 name = soup.find("span", {"id": "player_name"}).contents
 print (name)
 
+#this might not work for WAR
 war= soup.find("tr", {'class': "stata_total}).contents 
 print (war)
 
