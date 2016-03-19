@@ -76,16 +76,7 @@ def WAR(x):
         tr = soup3.find_all("td",{"align":"right"})
         lastsoup = BeautifulSoup(str(tr))
         war = lastsoup.find_all(text=True)
-        print(war)
-        WinsAbove.append((war[1])[23])
-
-
-def wargenerator(x):
-    table = x.find_all("table",{"id":"batting_value"})
-    soup2 = BeautifulSoup(str(table))
-    tfooter = soup2.find("tfoot")
-    soup3 = BeautifulSoup(str(tfooter))
-    tr = soup3.find_all("td",{"align":"right"})
-    lastsoup = BeautifulSoup(str(tr))
-    war = lastsoup.find_all(text=True)
-    WinsAbove.append(war[23])
+        WinsAbove.append(war)
+      
+#creates a set with all the WAR raw data need to run a function through this that selects the 23rd variable in the list. 
+#Ie WinsAbove[0][23],[1][23]
