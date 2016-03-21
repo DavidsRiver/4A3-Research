@@ -2,7 +2,10 @@
 from bs4 import BeautifulSoup
 import urllib.request
 
-#Currently this only works for URLS. 
+#Currently this only works for POSITION PLAYES
+# Need to do, do OTHER statistics you need to get, appending it all into a csv. 
+# Pitching
+
 
 names = [['Jose','Bautista'],['Josh','Donaldson']] 
 urls = []
