@@ -1,11 +1,10 @@
-#pip install beautifulsoup4
-# FINALLY GOT WAR, turn it into a function and do pitchers. 
 
 from bs4 import BeautifulSoup
 import urllib.request
-#urllib2 is urllibrequest
 
-names = [['Jose','Bautista'],['Josh','Donaldson'],['David','Price']] 
+#Currently this only works for URLS. 
+
+names = [['Jose','Bautista'],['Josh','Donaldson']] 
 urls = []
 
 def urlgenerator2(name):
@@ -67,7 +66,7 @@ WinsAbove = []
 urlgenerator2(names)
 def WAR(x):
     for y in x:
-        page = urllib.request.urlopen(y)
+        page = urllib.request.urlopen(str(y))
         soup = BeautifulSoup(page.read())
         table = soup.find_all("table",{"id":"batting_value"})
         soup2 = BeautifulSoup(str(table))
@@ -77,6 +76,16 @@ def WAR(x):
         lastsoup = BeautifulSoup(str(tr))
         war = lastsoup.find_all(text=True)
         WinsAbove.append(war)
-      
-#creates a set with all the WAR raw data need to run a function through this that selects the 23rd variable in the list. 
-#Ie WinsAbove[0][23],[1][23]
+        
+WAR(urls)
+print (WinsAbove)
+
+test1 = []
+
+def get23(x):
+    for y in x:
+        test1.append(y[23])
+        
+get23(WinsAbove)
+print(test1)
+print(urls)
