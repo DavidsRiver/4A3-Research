@@ -21,15 +21,3 @@ for i in range(0,len(data)):
         i = i + 1 
     else:
         i = i + 1 
-    
-
-
-
-
-
-
-print (data[15])
-print (data[39])
-print (data[63])
-print (data[87])
-print (data[111])
