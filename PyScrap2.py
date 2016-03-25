@@ -14,6 +14,16 @@ for tr in rows:
         text = td.find(text=True) 
         data.append(text)
 
+i = 15
+print (data[i])
+for i in range(0,len(data)):
+    if (i - 15)%24 == 0:
+        print (data[i])
+        i = i + 1 
+    else:
+        i = i + 1 
+
+
 
 print (data[15])
 print (data[39])
