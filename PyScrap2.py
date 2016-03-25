@@ -15,13 +15,16 @@ for tr in rows:
         data.append(text)
 
 i = 15
-print (data[i])
 for i in range(0,len(data)):
     if (i - 15)%24 == 0:
-        print (data[i])
+        print(data[i], end=" ") 
         i = i + 1 
     else:
         i = i + 1 
+    
+
+
+
 
 
 
