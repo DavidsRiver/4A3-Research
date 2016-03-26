@@ -1,9 +1,8 @@
 from bs4 import BeautifulSoup
 import urllib.request
 
-#Player URL, WAR Years. 
 
-def playerwar(url,years):
+def playerwar(url,name,age,position,contractyr,contractvalue,contractlength,years):
     page = urllib.request.urlopen(str(url))
     soup = BeautifulSoup(page.read(), "lxml")
     table = soup.find("table",{"id":"batting_value"})
@@ -16,12 +15,16 @@ def playerwar(url,years):
             data.append(text)
     x =(years*24)+15
     i = 15
-    for i in range(0,x):
+    print ((name)+','+(age)+','+(position)+','+(contractyr)+','+(contractvalue)+','+(contractlength)+',', end =" ")
+    for i in reversed(range(0,x)):
         if (i - 15)%24 == 0:
             print((data[i])+(','), end=" ") 
             i = i + 1 
         else:
             i = i + 1 
-            
-playerwar('http://www.baseball-reference.com/players/b/bautijo02.shtml',5)
+    
+# url,name,age,position,contractyear,contractvalue,contractlength.years
 
+playerwar('http://www.baseball-reference.com/players/w/wrighda03.shtml',
+          'David Wright','33.097','2013','138','8','3B'
+          ,10)
