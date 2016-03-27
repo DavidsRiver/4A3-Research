@@ -1,4 +1,4 @@
-name,age,contractyr,contractvalue,contractlength,position,War1,War2,War3,War,4,War5,War6,War7,War8,War9,War10,War11,War12,War13
+name,age,contractyr,contractvalue,contractlength,position,War1,War2,War3,War,4,War5,War6,War7,War8,War9,War10,War11,War12,War13,
 Robinson Cano,33.156,2014,240,10,1B, 7.8, 8.4, 5.7, 8.1, 4.5, 0.2, 6.7, 3.2, 0.8,.,.,.,.,
 Adrian Beltre,36.354,2011,96,5,3B, 7.8, 3.3, 5.6, 3.8, 5.4, 3.2, 9.5, 3.6, 2.0, 0.8, 3.3, 3.9, 0.2, 
 Miguel Cabrera,32.343,2016,248,8,3B, 5.2, 5.0, 7.3, 7.2, 7.5, 6.4, 5.1, 2.7, 3.2, 5.8, 5.2, 3.4, 0.6,
@@ -18,20 +18,17 @@ Yadier Molina,33.257,2013,75,5,C, 6.9, 2.8, 3.1, 3.1, 1.3, 2.1, -0.2, 1.4, 0.4,
 Adam Jones,30.238,2013,85.5,6,OF, 3.8, 3.0, 2.5, 2.6, 2.0, 0.9, 0.0, 
 Chase Headley,32.151,2015,52,4,3B, 2.1, 1.4, 3.4, 6.3, 2.8, 3.9, 0.6, 1.0, -0.2, 
 David Wright,33.097,2013,138,8,3B, 5.9, 7.0, 2.0, 2.8, 3.2, 6.8, 8.3, 4.1, 4.8, 2.1, 
+Curtis Granderson,35.010,2014,60,4,3B, 1.2, 3.0, 5.7, 4.4, 4.3, 3.9, 7.6, 3.3, 2.2, -0.1, 
+Joe Mauer,32.342,2011,184,8,3B, 5.9, 7.8, 5.6, 3.9, 5.8, 2.8, 1.4, 
+Justin Upton,28.214,2016,132.8,6,OF, 4.4, 3.2, 2.9, 2.5, 6.1, 1.5, 4.0, 0.8, -0.6, 
+Matt Holliday,36.071,2010,120,7,OF, 2.3, 3.0, 5.8, 6.0, 3.4, 2.8, 0.4, 
+David Ortiz,40.129,2013,26,2,DH, 3.2, 3.9, 2.8, 0.7, 1.7, 6.4, 5.7, 5.3, 4.2, 3.3, 1.3, 0.3, 0.7, -0.6, 0.7, 0.1, 
+Jacoby Ellsbury,32.197,2014,153,7,OF, 1.0, 8.1, -0.1, 2.8, 3.0, 0.6, 
+Edwin Encarnacion,33.079,2013,29,3,DH, 5.0, 0.9, 1.6, 0.7, -0.7, 0.6, 1.4, 0.9, 0.9, 
+Josh Hamilton,34.310,2013,123,5,OF, 3.9, 3.7, 8.7, 0.6, 5.4, 2.5, 
+Howie Kendrick,32.258,2016,20,2,2B, 1.1, 5.3, 3.4, 2.9, 4.6, 2.4, 3.1, 1.9, 2.5, 1.5, 
 
 
-
-Carlos Gomez
-Curtis Granderson
-Joe Mauer
-Justin Upton
-Matt Holliday (RoY-5th)
-David Ortiz
-Chase Utley
-Jacoby Ellsbury (RoY-3rd)
-Edwin Encarnacion
-Josh Hamilton
-Howie Kendrick
 Brandon Phillips
 Russell Martin (RoY-9th)
 Carlos Gonzalez
@@ -100,7 +97,13 @@ Paul Goldschmidt
 Josh Donaldson
 Giancarlo Stanton
 Martin Prado
+Carlos Gomez
+Chase Utley
+
+
+
 Older Players 
+
 
 04,Nomar Garciaparra ,37.4,1998,2009,24-35,1257,5289,4815,794,1517,324,38,195,822,364,52,448,53,2,55,120,68,22,.315,.366,.520,.885,*63/5HD,BOS-CHC-LAD-OAK
 105,Shannon Stewart,24.7,1998,2008,24-34,1323,5950,5351,824,1594,301,34,115,555,479,15,651,69,15,36,111,183,68,.298,.361,.431,.792,*7D/8H9,TOR-MIN-OAK
