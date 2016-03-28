@@ -41,42 +41,28 @@ J.J. Hardy,33.220,2015,40,3,SS, 3.3, 3.9, 3.2, 4.1, 1.3, 0.5, 4.7, 3.2, 0.8, 1.8
 Jose Reyes,32.289,2012,106,6,SS, 4.7, 2.3, 0.9, 4.8, 5.1, 5.8, 1.6, 0.5, 2.3, 
 Denard Span,32.028,2016,31,3,OF, 0.8, 3.7, 2.3, 5.0, 2.4, 1.7, 3.8, 4.3, 
 Mark Teixeira,35.350,2009,180,8,1B, 3.7, 4.1, 2.0, 2.6, 4.4, 7.2, 4.6, 2.7, 
+Carlos Ruiz,37.066,2014,26,3,C, 1.7, 4.5, 2.8, 4.0, 2.6, 0.1, 2.0, 0.0, 
+Pablo Sandoval,29.230,2015,95,5,3B, 3.4, 2.3, 2.1, 6.1, 1.5, 4.3, 1.0, 
+Chris Davis,30.011,2016,161,7,1B, 5.2, 1.8, 6.5, 1.6, 0.0, -0.1, -0.5, -0.9, 1.0, 
+Prince Fielder,31.324,2012,214,9,1B, 4.6, 1.5, 6.3, 1.5, 3.6, -0.7, 0.0, 
+Torii Hunter,40.254,2013,26,2,OF, 5.7, 3.8, 3.0, 5.2, 3.5, 3.9, 3.3, 3.1, 4.2, 3.8, 3.5, 4.7, 0.2, 0.8, -0.4, 0.0, 
+Marlon Byrd,38.211,2014,16,2,OF, -0.0, -0.4, 1.9, 3.7, 2.2, 3.5, 3.2, 1.2, -0.1, 0.0, -2.1, 3.4, -0.2, 
+Chris Young,32.205,2016,13,2,OF, 1.2, 0.9, -0.1, -0.2, 2.0, 5.0, 5.4, -0.0, 1.4, 0.7, 0.2, 
+Brian McCann,32.037,2014,85,5,C, 2.3, 0.8, 2.5, 3.6, 3.2, 5.5, 1.0, 4.3, 0.3, 
+Jayson Werth,36.313,2011,126,7,OF, 4.5, 4.5, 3.7, 3.0, 1.3, 3.0,0.0, 0.2
+Alex Rodriguez,40.245,2008,275,10,3B, 9.4, 4.5, 9.4, 7.6, 8.4, 8.8, 8.3, 10.4, 4.7, 8.5, 5.6, 9.4, -0.4, -0.2,
+Coco Crisp,36.148,2015,22,2,OF, 1.0, 4.1, 3.2, 2.7, 3.4, 1.4, 1.3, 3.3, 0.3, 4.3, 3.3, 0.5, 0.7, 
+Asdrubal Cabrera,30.136,2016,18.5,2,SS, 1.7, -0.2, 1.1, 1.0, 3.3, 5.0, 1.4, 4.2, 3.0, 1.6, 
+Melky Cabrera,31.230,2015,42,3,OF, 3.1, -0.1, 4.7, 4.4, -0.3, 1.2, 0.4, 1.6, 3.0, -0.5, 
 
 
 
-Carlos Ruiz
-Jonathan Lucroy
-Jason Kipnis
-Neil Walker (RoY-5th)
-Yunel Escobar (RoY-6th)
-Bryce Harper (RoY-1st)
-Pablo Sandoval
-Chris Davis
-Ian Desmond
-Prince Fielder (RoY-7th)
-Freddie Freeman (RoY-2nd)
-Player
-Torii Hunter
-Andrelton Simmons
-Marlon Byrd (RoY-4th)
-Colby Rasmus (RoY-8th)
-Chris Young (RoY-4th)
-Anthony Rizzo
-Brian McCann
-Jayson Werth
-Alex Rodriguez
-Coco Crisp
-Brandon Crawford
-Jay Bruce (RoY-5th)
-Andre Ethier (RoY-5th)
-Asdrubal Cabrera
-Matt Carpenter (RoY-6th)
-Matt Wieters
-Melky Cabrera
-Dexter Fowler (RoY-8th)
-Jose Altuve
-Salvador Perez
-Todd Frazier (RoY-3rd)
+
+
+
+
+
+
 
 Unsure of doing
 Andrew McCutchen (RoY-4th)
@@ -93,33 +79,29 @@ Lorenzo Cain
 Elvis Andrus
 Carlos Santana
 Starling Marte
-
-Small Contract
+Jonathan Lucroy
 Alexei Ramirez
 Mike Napoli
 Austin Jackson
+Jason Kipnis
+Neil Walker
+Yunel Escobar
+Bryce Harper
+Ian Desmond
+Freddie Freeman
+Andrelton Simmons
+Colby Rasmus
+Anthony Rizzo
+Brandon Crawford
+Jay Bruce
+Andre Ethier
+Matt Carpenter
+Dexter Fowler
+Jose Altuve
+Salvador Perez
+Todd Frazier
 
-Older Players 
 
-
-
-04,Nomar Garciaparra ,37.4,1998,2009,24-35,1257,5289,4815,794,1517,324,38,195,822,364,52,448,53,2,55,120,68,22,.315,.366,.520,.885,*63/5HD,BOS-CHC-LAD-OAK
-105,Shannon Stewart,24.7,1998,2008,24-34,1323,5950,5351,824,1594,301,34,115,555,479,15,651,69,15,36,111,183,68,.298,.361,.431,.792,*7D/8H9,TOR-MIN-OAK
-106,Derek Jeter ,68.9,1997,2014,23-40,2575,11897,10565,1814,3270,515,59,250,1226,1031,38,1727,161,91,49,274,344,90,.310,.378,.440,.818,*6/DH,NYY
-107,Jason Kendall ,39.9,1997,2010,23-36,1955,8231,7213,976,2071,371,30,72,702,686,40,656,239,33,59,169,184,87,.287,.365,.377,.742,*2/H79D,PIT-OAK-CHC-MIL-KCR
-108,Darin Erstad ,31.5,1997,2009,23-35,1597,6399,5816,879,1638,311,32,120,679,458,45,910,37,35,40,84,176,55,.282,.336,.408,.744,387H/D9,ANA-LAA-CHW-HOU
-109,Edgar Renteria ,28.8,1997,2011,20-34,2046,8595,7711,1132,2194,418,26,135,892,685,42,1114,29,97,73,229,278,106,.285,.342,.398,.740,*6/H4D3,FLA-STL-BOS-ATL-DET-SFG-CIN
-110,Luis Castillo,27.7,1997,2010,21-34,1679,7291,6346,975,1846,192,58,27,435,786,13,804,12,121,26,120,353,138,.291,.369,.352,.721,*4/H,FLA-MIN-NYM
-111,Mike Sweeney,24.3,1997,2010,23-36,1400,5654,5019,735,1493,315,5,211,885,504,61,592,70,5,56,135,52,23,.297,.366,.488,.854,3D2/H,KCR-OAK-SEA-PHI
-113,Chipper Jones,82.2,1996,2012,24-40,2351,10008,8457,1530,2585,526,35,445,1537,1438,176,1309,18,2,93,243,142,42,.306,.404,.534,.938,*57/H6D9,ATL
-114,Johnny Damon,54.7,1996,2012,22-38,2443,10711,9548,1636,2716,511,104,232,1116,991,38,1235,49,55,68,91,401,103,.284,.352,.433,.785,*87D9H/3,KCR-OAK-BOS-NYY-DET-TBR-CLE
-115,Jason Giambi,49.6,1996,2014,25-43,2206,8698,7091,1200,1965,398,9,434,1416,1338,97,1541,177,1,91,162,18,11,.277,.400,.519,.920,*3DH7/59,OAK-NYY-COL-CLE
-
-
-
-Rk,Player,WAR/pos,From,To,Age,G,PA,AB,R,H,2B,3B,HR,RBI,BB,IBB,SO,HBP,SH,SF,GDP,SB,CS,BA,OBP,SLG,OPS,Pos,Tm
-1,Mike Trout,26.5,2013,2015,21-23,473,2103,1766,328,535,110,24,104,298,285,30,478,29,0,23,25,60,16,.303,.404,.569,.973,*8/7D,LAA
-2,Josh Donaldson,23.9,2013,2015,27-29,474,2074,1807,304,513,109,7,94,314,225,7,373,19,3,20,47,19,2,.284,.366,.508,.874,*5/DH63,OAK-TOR
 3,Paul Goldschmidt,23.8,2012,2015,24-27,573,2471,2089,363,633,156,7,108,386,341,62,536,11,0,24,60,63,18,.303,.400,.539,.939,*3/HD,ARI
 4,Buster Posey ,25.1,2011,2015,24-28,638,2618,2316,302,724,134,4,84,380,250,33,317,20,0,32,71,8,3,.313,.380,.483,.862,*23/HD,SFG
 5,Jason Heyward ,24.7,2011,2015,21-25,693,2806,2485,363,660,129,16,79,280,280,13,506,22,1,12,33,75,21,.266,.344,.426,.769,*9/8H,ATL-STL
