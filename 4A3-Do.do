@@ -21,6 +21,9 @@ use "Data1"
 // Variable Generation // 
 // Only run this once if you save .dta file 
 
+gen pitcher = position == "P" 
+gen fivewar = war1 + war2 + war3 + war4 +war5
+
 gen LnContractValue = 0 
 replace LnContractValue = ln(contractvalue)
 
