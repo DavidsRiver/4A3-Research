@@ -26,9 +26,16 @@ gen fivewar = war1 + war2 + war3 + war4 +war5
 
 gen LnContractValue = 0 
 replace LnContractValue = ln(contractvalue)
+// Visualization 
 
-g Pitcher =0
-replace Pitcher = 1 if plyrpost == 1
+graph twoway (scatter contractvalue fivewar if optout==0) (scatter contractvalue fivewar if optout==1)
+// produces graph contractvalue, fivewar
+
+graph twoway (scatter contractvalue fivewar if pitcher==0) (scatter contractvalue fivewar if pitcher==1)
+// produces graph contractvalue fivewar , 
+
+
+
 
 // Regressions 
 // Contract Value 
