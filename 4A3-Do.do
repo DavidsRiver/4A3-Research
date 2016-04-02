@@ -24,8 +24,9 @@ use "Data1"
 gen pitcher = position == "P" 
 gen fivewar = war1 + war2 + war3 + war4 +war5
 
-gen LnContractValue = 0 
-replace LnContractValue = ln(contractvalue)
+gen lncontractvalue = 0 
+replace lncontractvalue = ln(contractvalue)
+
 // Visualization 
 
 graph twoway (scatter contractvalue fivewar if optout==0) (scatter contractvalue fivewar if optout==1)
