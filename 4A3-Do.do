@@ -21,6 +21,8 @@ use "Data1"
 // Variable Generation // 
 // Only run this once if you save .dta file 
 
+
+g adjustedcv = contractvalue*(1.004736^(2016-contractyr))
 gen pitcher = position == "P" 
 gen fivewar = war1 + war2 + war3 + war4 +war5
 
