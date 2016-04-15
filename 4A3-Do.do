@@ -72,7 +72,8 @@ outreg using WhichWAR.doc, merge
 // SUMMARY STATISTICS 
 
 sum agecontract whenoptout contractyr contractlength adjustedcv pitcher avgcontract if optout == 1 
-sum 1war twowar threewar fourwar fivewar sixwar sevenwar ninewar tenwar if optout == 1 & fivewar > 0
+sum war1 twowar threewar fourwar fivewar sixwar sevenwar eightwar ninewar tenwar if optout == 1 & fivewar > 0
+
 
 reg adjustedcv fivewar optout pitcher agecontract  if fivewar > 0
 graph twoway (scatter adjustedcv fivewar if optout==0) (scatter adjustedcv fivewar if optout==1, mlabel(name))  if fivewar > 0
