@@ -74,9 +74,21 @@ outreg using WhichWAR.doc, merge
 sum agecontract whenoptout contractyr contractlength adjustedcv pitcher avgcontract if optout == 1 
 sum war1 twowar threewar fourwar fivewar sixwar sevenwar eightwar ninewar tenwar if optout == 1 & fivewar > 0
 
+// 1st Model  (1) Salary = Salaryi = β0 + β1 Age +β2 WAR + β3 Position + β4PlayerOption + εi
 
-reg adjustedcv fivewar optout pitcher agecontract  if fivewar > 0
+reg adjustedcv fivewar optout if fivewar >0, vce(robust)
+outreg using model1.doc, replace 
+reg adjustedcv fivewar optout agecontract if fivewar >0 ,vce(robust)
+outreg using model1.doc, merge
+reg adjustedcv fivewar optout agecontract pitcher if fivewar >0 ,vce(robust)
+outreg using model1.doc, merge
+reg adjustedcv fivewar optout agecontract pitcher outfield if fivewar >0 ,vce(robust)
+outreg using model1.doc, merge
+
+Problems
 graph twoway (scatter adjustedcv fivewar if optout==0) (scatter adjustedcv fivewar if optout==1, mlabel(name))  if fivewar > 0
+reg adjustedcv fivewar if optout == 0 ,vce(robust)
+reg adjustedcv fivewar if optout == 1 ,vce(robust)
 
 reg avcontract fivewar optoutvalue agecontract  if fivewar > 0
 reg adjavgcontract fivewar optoutvalue agecontract  if fivewar > 0
