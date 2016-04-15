@@ -1,28 +1,23 @@
-*setting up Stata
+cd "/Users/David/Downloads/4A3-Research-master 6"
+import delimited MasterData 
 
-capture log close /* in case a log file is open from previous use */
+*Variable Generation 
 
-cd "/Users/David/Desktop/4A03- Research
-*MacDesktop
-*cd "/Volumes/JDR" 
-*USB MAC
-*cd "D:\"
-*USB Lab 
-
-log using Econ4A3-Research.log, replace text
-capture drop _all
-pause on
-
-*import delimited data 
-// imports CSV than you save into .dta file
-
-use "Data1"
-
-// Variable Generation // 
-// Only run this once if you save .dta file 
+replace war1 = 0 if war1 ==.
+replace war2 = 0 if war2 ==.
+replace war3 = 0 if war3 ==.
+replace war4 = 0 if war4 ==.
+replace war5 = 0 if war5 ==.
+replace war6 = 0 if war6 ==.
+replace war7 = 0 if war7 ==.
+replace war8 = 0 if war8 ==.
+replace war9 = 0 if war9 ==.
+replace war10 = 0 if war10 ==.
+replace war11 = 0 if war11 ==.
+replace war12 = 0 if war12 ==.
 
 
-g adjustedcv = contractvalue*(1.004736^(2016-contractyr))
+g adjustedcv = contractvalue*(1.04736^(2016-contractyr))
 gen pitcher = position == "P" 
 gen fivewar = war1 + war2 + war3 + war4 +war5
 
