@@ -3,6 +3,7 @@ import delimited MasterData
 
 *Variable Generation 
 
+gen foreign = 1 if war1 ==. 
 replace war1 = 0 if war1 ==.
 replace war2 = 0 if war2 ==.
 replace war3 = 0 if war3 ==.
@@ -31,12 +32,7 @@ gen fivewar = war1 + war2 + war3 + war4 +war5
 gen fourwar =  war1 + war2 + war3 + war4
 gen threewar =  war1 + war2 + war3 
 gen twowar =  war1 + war2
-
-
-
-reg adjustedcv fivewar optout pitcher agecontract  if fivewar > 0
- graph twoway (scatter adjustedcv fivewar if optout==0) (scatter adjustedcv fivewar if optout==1, mlabel(name))  if fivewar > 0
-
+gen onewar = war1 
 
 
 gen avgcontract = contractvalue/contractlength
@@ -49,48 +45,38 @@ replace whenoptout = 0 if whenoptout == .
 gen optoutvalue = 1/whenoptout 
 replace optoutvalue = 0 if optoutvalue ==.
 
+
+// WHICH WAR to use?
+
+reg adjustedcv onewar 
+outreg using WhichWAR.doc, replace 
+reg adjustedcv twowar
+outreg using WhichWAR.doc, merge
+reg adjustedcv threewar
+outreg using WhichWAR.doc, merge
+reg adjustedcv fourwar
+outreg using WhichWAR.doc, merge
+reg adjustedcv fivewar 
+outreg using WhichWAR.doc, merge
+reg adjustedcv sixwar
+outreg using WhichWAR.doc, merge
+reg adjustedcv sevenwar
+outreg using WhichWAR.doc, merge
+reg adjustedcv eightwar
+outreg using WhichWAR.doc, merge
+reg adjustedcv ninewar 
+outreg using WhichWAR.doc, merge
+reg adjustedcv tenwar
+outreg using WhichWAR.doc, merge
+
+// SUMMARY STATISTICS 
+
+sum agecontract whenoptout contractyr contractlength adjustedcv pitcher avgcontract if optout == 1 
+sum 1war twowar threewar fourwar fivewar sixwar sevenwar ninewar tenwar if optout == 1 & fivewar > 0
+
+reg adjustedcv fivewar optout pitcher agecontract  if fivewar > 0
+graph twoway (scatter adjustedcv fivewar if optout==0) (scatter adjustedcv fivewar if optout==1, mlabel(name))  if fivewar > 0
+
 reg avcontract fivewar optoutvalue agecontract  if fivewar > 0
 reg adjavgcontract fivewar optoutvalue agecontract  if fivewar > 0
 
-
-// Visualization 
-
-graph twoway (scatter contractvalue fivewar if optout==0) (scatter contractvalue fivewar if optout==1)
-// produces graph contractvalue, fivewar
-
-graph twoway (scatter contractvalue fivewar if pitcher==0) (scatter contractvalue fivewar if pitcher==1)
-// produces graph contractvalue fivewar , 
-
-
-
-
-// Regressions 
-// Contract Value 
-// Outreg produces Research Tables 
-
-reg contractvalue totalwar 
-outreg using ContractV.doc, replace 
-reg contractvalue totalwar plyagecontract
-outreg using ContractV.doc, merge
-reg contractvalue totalwar plyagecontract Pitcher
-outreg using ContractV.doc, merge
-reg contractvalue totalwar plyagecontract Pitcher contractyr
-outreg using ContractV.doc, merge
-reg contractvalue totalwar plyagecontract Pitcher contractyr contractlength 
-outreg using ContractV.doc, merge
-
-
-//LnContractValue 
-reg LnContractValue totalwar 
-outreg using LnContractV.doc, replace 
-reg LnContractValue totalwar plyagecontract
-outreg using LnContractV.doc, merge
-reg LnContractValue totalwar plyagecontract Pitcher
-outreg using LnContractV.doc, merge
-reg LnContractValue totalwar plyagecontract Pitcher contractyr
-outreg using LnContractV.doc, merge
-reg LnContractValue totalwar plyagecontract Pitcher contractyr contractlength 
-outreg using LnContractV.doc, merge
-
-
-log close
