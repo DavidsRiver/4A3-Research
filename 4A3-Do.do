@@ -23,6 +23,7 @@ g adjustedcv = contractvalue*(1.060549)^(2016-contractyr)
 g lnadjustedcv = ln(adjustedcv) 
 gen pitcher = position == "P" 
 
+
 gen tenwar = war1 + war2 + war3 + war4 +war5 +war6 +war7 +war8 + war9 +war10 
 gen ninewar = war1 + war2 + war3 + war4 +war5 +war6 +war7 +war8 + war9
 gen eightwar = war1 + war2 + war3 + war4 +war5 +war6 +war7 +war8
@@ -82,8 +83,7 @@ reg adjustedcv fivewar optout agecontract if fivewar >0 ,vce(robust)
 outreg using model1.doc, merge
 reg adjustedcv fivewar optout agecontract pitcher if fivewar >0 ,vce(robust)
 outreg using model1.doc, merge
-reg adjustedcv fivewar optout agecontract pitcher outfield if fivewar >0 ,vce(robust)
-outreg using model1.doc, merge
+
 
 // 2nd Model (2) Ln(Salary) =β0 + β1 Age +β2 WAR + β2 Position + β3PlayerOption + εi 
 reg lnadjustedcv fivewar optout if fivewar >0, vce(robust)
@@ -92,8 +92,15 @@ reg lnadjustedcv fivewar optout agecontract if fivewar >0 ,vce(robust)
 outreg using model2.doc, merge
 reg lnadjustedcv fivewar optout agecontract pitcher if fivewar >0 ,vce(robust)
 outreg using model2.doc, merge
-reg lnadjustedcv fivewar optout agecontract pitcher outfield if fivewar >0 ,vce(robust)
-outreg using model2.doc, merge
+
+// 3rd Model (3) AVGSalaryi = β0 + β1 Age +β2 WAR + β3 Position + β4PlayerOptionYears + εi (3)
+reg adjavgcontract fivewar optoutvalue if fivewar > 0 ,vce(robust)
+outreg using model3.doc, replace 
+reg adjavgcontract fivewar optoutvalue agecontract if fivewar >0 ,vce(robust)
+outreg using model3.doc, merge
+reg adjavgcontract fivewar optoutvalue agecontract pitcher if fivewar >0 ,vce(robust)
+outreg using model3.doc, merge
+
 
 Problems
 graph twoway (scatter adjustedcv fivewar if optout==0) (scatter adjustedcv fivewar if optout==1, mlabel(name))  if fivewar > 0
