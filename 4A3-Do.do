@@ -19,7 +19,7 @@ replace war12 = 0 if war12 ==.
 
 gen lncontractvalue = 0 
 replace lncontractvalue = ln(contractvalue)
-g adjustedcv = contractvalue*(1.060549)^(2016-contractyr))
+g adjustedcv = contractvalue*(1.060549)^(2016-contractyr)
 g lnadjustedcv = ln(adjustedcv) 
 gen pitcher = position == "P" 
 
